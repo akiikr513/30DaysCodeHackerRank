@@ -1,6 +1,6 @@
 function processData(input) {
-  //Enter your code here
-  input = input.split('\n');
+    //Enter your code here
+    input = input.split('\n');
   var phoneBook = [];
 
   for (i = 1; i <= parseInt(input[0]); i++) {
@@ -15,4 +15,15 @@ function processData(input) {
       console.log('Not found');
     }
   }
-}
+} 
+
+process.stdin.resume();
+process.stdin.setEncoding("ascii");
+_input = "";
+process.stdin.on("data", function (input) {
+    _input += input;
+});
+
+process.stdin.on("end", function () {
+   processData(_input);
+});
