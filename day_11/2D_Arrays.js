@@ -1,14 +1,39 @@
+'use strict';
+
+process.stdin.resume();
+process.stdin.setEncoding('utf-8');
+
+let inputString = '';
+let currentLine = 0;
+
+process.stdin.on('data', inputStdin => {
+    inputString += inputStdin;
+});
+
+process.stdin.on('end', _ => {
+    inputString = inputString.replace(/\s*$/, '')
+        .split('\n')
+        .map(str => str.replace(/\s*$/, ''));
+
+    main();
+});
+
+function readLine() {
+    return inputString[currentLine++];
+}
+
+
+
 function main() {
-  var arr = [];
-  for (arr_i = 0; arr_i < 6; arr_i++) {
-    arr[arr_i] = readLine().split(' ');
-    arr[arr_i] = arr[arr_i].map(Number);
-  }
+    let arr = Array(6);
 
-  var sumArray = [];
-  for (i = 0; i < arr.length; i++) {
+    for (let i = 0; i < 6; i++) {
+        arr[i] = readLine().split(' ').map(arrTemp => parseInt(arrTemp, 10));
+    }
+    var sumArray = [];
+  for (var i = 0; i < arr.length; i++) {
 
-    for (j = 0; j < arr[i].length; j++) {
+    for (var j = 0; j < arr[i].length; j++) {
       var singleSum = 0;
       if (arr[i] && arr[i + 1] && arr[i + 2]) {
         if (arr[i][j + 1] != undefined && arr[i][j + 2] != undefined) {
