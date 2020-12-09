@@ -1,23 +1,48 @@
-// function main() {
-//   /*
-//      * Try using `eval`
-//      */
-//   var S = readLine();
+process.stdin.resume();
+process.stdin.setEncoding('ascii');
 
-//   try {
-//     console.log(eval(S))
-//   } catch (e) {
-//     console.log('Bad String')
-//   }
-// }
-const n = () => { throw new Error(); }
-    
-try {
-    const N = parseInt(S);
+var input_stdin = "";
+var input_stdin_array = "";
+var input_currentline = 0;
 
-	(!N || isNaN(N)) && t();
+process.stdin.on('data', function (data) {
+    input_stdin += data;
+});
 
-	console.log(N);
-} catch (e) {
-	console.log("Bad String");
+process.stdin.on('end', function () {
+    input_stdin_array = input_stdin.split("\n");
+    main();    
+});
+
+function readLine() {
+    return input_stdin_array[input_currentline++];
+}
+
+/////////////// ignore above this line ////////////////////
+
+/*
+ * You can use the following pseudocode:
+ *
+ * `S` = read string from stdin.
+ * try {
+ *     `N` = numeric value of `S`.
+ *     
+ *     If `N` is `NaN` or `undefined`, then some exception must be thrown,
+ *     you can write the following withtout using conditional statement:
+ *     <condition to return true when `N` is `NaN` or `undefined`> && an_undefined_function_call()
+ *
+ *     print `N`
+ * } catch (err) {
+ *     print `Bad String`.
+ * }
+ */
+
+
+function main() {
+    const S = readLine();
+    try {
+        console.log(eval(S))
+    }catch (e) {
+        console.log('Bad String')
+  }
 }
