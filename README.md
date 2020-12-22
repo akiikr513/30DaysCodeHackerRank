@@ -11,9 +11,12 @@
     <br />
     <a href="https://github.com/akiikr513/30DaysCodeHackerRank"><strong>View the Repo</strong></a>
     <br />
-   
+   <a href="https://www.linkedin.com/feed/update/urn:li:activity:6747045356946751488/">
+   <img src = "https://media-exp1.licdn.com/dms/image/sync/C5627AQEOglrv-BCdtQ/articleshare-shrink_800/0/1608620936201?e=1608710400&v=beta&t=niamVqwkCNZzriAhTiF4V5KLq74GPspcvLqDUl6Vqvk"  alt="Badge"  width="350" height="200"> </a>
   </p>
+  
 </p>
+
 
 <p> 
 <center> Before checking code give another try, <br> Please Don't Copy Paste </center>
